@@ -2,7 +2,7 @@ export default function Movies({ children }) {
   return (
     <div
       className="bg-[#111111] flex flex-col text-white mt-11 px-5 py-20 "
-      id="movies "
+      id="movies"
     >
       <div className="flex flex-col text-start">
         <p className="text-[#F5C518] tracking-widest pb-2.5">

@@ -1,7 +1,7 @@
 export default function About() {
   return (
-    <div className="bg-[#FFFDF5]">
-      <div className=" border-b-[#DDDBD4] border-b px-7 py-20 flex flex-col md:flex-row justify-between">
+    <div className="bg-[#FFFDF5]" id="about">
+      <div className=" border-b-[#DDDBD4] border-b px-7 pt-20 pb-10 flex flex-col md:flex-row justify-between">
         <div className="flex flex-col  gap-2 pb-7">
           <p className="text-4xl">Small room</p>
           <p className="text-4xl text-[#F5C518] text">Big screen energy</p>

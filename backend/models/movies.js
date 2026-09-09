@@ -1,0 +1,138 @@
+const movies = [
+    {
+    id: 1,
+    img: "https://placehold.co/600x400",
+    name: "A Quiet Place",
+    category: "Thriller",
+    rating: "PG-13",
+    time: "2h 5min",
+  },
+  
+  {
+    id: 2,
+    img: "https://placehold.co/600x400",
+    name: "A Quiet Place Part II",
+    category: "Thriller",
+    rating: "PG-13",
+    time: "2h 5min",
+  },
+  
+  {
+    id: 3,
+    img: "https://placehold.co/600x400",
+    name: "The Batman",
+    category: "Action",
+    rating: "PG-13",
+    time: "2h 5min",
+  },
+
+  {
+    id: 4,
+    img: "https://placehold.co/600x400",
+    name: "How To Train Your Dragon",
+    category: "Animation",
+    rating: "PG-13",
+    time: "2h 5min",
+  },
+
+  {
+    id: 5,
+    img: "https://placehold.co/600x400",
+    name: "The Bridge to Terabithia",
+    category: "Drama",
+    rating: "PG-12",
+    time: "2h 5min",
+  },
+
+  {
+    id: 6,
+    img: "https://placehold.co/600x400",
+    name: "Snow White and the Huntsman",
+    category: "Fantasy",
+    rating: "PG-13",
+    time: "2h 5min",
+  },
+
+  {
+    id: 7,
+    img: "https://placehold.co/600x400",
+    name: "The Last Horizon",
+    category: "Science Fiction",
+    rating: "PG-13",
+    time: "2h 5min",
+  },
+
+  {
+    id: 8,
+    img: "https://placehold.co/600x400",
+    name: "Neon Streets",
+    category: "Action",
+    rating: "PG-13",
+    time: "2h 5min",
+  },
+
+  {
+    id: 9,
+    img: "https://placehold.co/600x400",
+    name: "Movie title",
+    category: "Category",
+    rating: "PG-13",
+    time: "2h 5min",
+  },
+
+  {
+    id: 10,
+    img: "https://placehold.co/600x400",
+    name: "Movie title",
+    category: "Category",
+    rating: "PG-13",
+    time: "2h 5min",
+  },
+
+  {
+    id: 11,
+    img: "https://placehold.co/600x400",
+    name: "Movie title",
+    category: "Category",
+    rating: "PG-13",
+    time: "2h 5min",
+  },
+
+  {
+    id: 12,
+    img: "https://placehold.co/600x400",
+    name: "Movie title",
+    category: "Category",
+    rating: "PG-13",
+    time: "2h 5min",
+  },
+
+  {
+    id: 13,
+    img: "https://placehold.co/600x400",
+    name: "Movie title",
+    category: "Category",
+    rating: "PG-13",
+    time: "2h 5min",
+  },
+
+  {
+    id: 14,
+    img: "https://placehold.co/600x400",
+    name: "Movie title",
+    category: "Category",
+    rating: "PG-13",
+    time: "2h 5min",
+  },
+
+  {
+    id: 15,
+    img: "https://placehold.co/600x400",
+    name: "Movie title",
+    category: "Category",
+    rating: "PG-13",
+    time: "2h 5min",
+  },
+];
+
+module.exports = movies;    

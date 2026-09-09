@@ -1,10 +1,15 @@
+import { useNavigate } from "react-router";
+
 export default function Movie(props) {
+  const navigate = useNavigate();
+
   return (
     <div className="text-white m-3">
       <div className="p-4">
         <div className="overflow-hidden rounded-2xl">
           <img
             src={props.img}
+            onClick={() => navigate(`/movie/${props.id}`)}
             className="w-full h-auto transition-transform duration-300 ease-in-out hover:scale-110 "
           />
         </div>
@@ -33,7 +38,7 @@ export default function Movie(props) {
         </p>
         <button
           className="flex items-center gap-1 text-[#F5C516] font-bold text-sm cursor-pointer"
-          onClick={() => console.log(props.key)}
+          onClick={() => navigate(`/movie/${props.id}`)}
         >
           Choose seats
           <svg

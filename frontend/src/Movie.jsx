@@ -265,7 +265,7 @@ export default function Movie() {
             Select at least one seat to continue.
           </p>
           <button
-            onClick={(e) => {
+            onClick={() => {
               if (seats === 0) {
                 warningRef.current.classList.remove("hidden");
               } else {

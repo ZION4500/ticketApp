@@ -1,26 +1,32 @@
 
-const http = require("http");
-
+//Import  node dependencies
 const express = require("express");
-
 const cors = require("cors");
 require("dotenv").config();
 
+
+const movies = require("./models/movies.js");
+//const movieRoutes = require("./routes/movieRoutes.js");
+
+//Initialize the app
 const app = express();
 
+/*app.use("/api/movies", movies);*/
+
+//Set up middleware
+app.use(cors());
+app.use(express.json());
+
+
+//Start the server
 const PORT = process.env.PORT || 3000;
 
-const server = createServer(function (req, res) {
-    res.statusCode = 200;
-    res.setHeader("Content-Type", "text/plain");
-    res.end("Welcome to the  Cinevo");
+app.get("/", (req, res) => {
+  res.send("Welcome to Cinevo");
 });
 
 
-const movies = require("./models/movies.js");
- 
-const seats = require("./models/seats.js")
 
-server.listen(PORT, () => {
-    console.log(`Server running at http://localhost:${PORT}/`);
-})
+app.listen(PORT, () => {
+  console.log(`Server running on port ${PORT}`);
+});

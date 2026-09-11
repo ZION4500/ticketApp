@@ -37,7 +37,7 @@ export default function App() {
       <Movies>
         {data.map((movie) => (
           <Movie
-            key={movie.id}
+            id={movie.id}
             img={movie.img}
             name={movie.name}
             category={movie.category}

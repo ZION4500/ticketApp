@@ -65,8 +65,8 @@ export default function Movie() {
   const formRef = useRef(null);
   const detailsRef = useRef(null);
   return (
-    <div className="bg-[#FFFDF5]">
-      <header className=" border border-[#DDDBD4]">
+    <div className="bg-[#FFFDF5]  min-h-screen">
+      <header className=" border border-[#DDDBD4] w-fu">
         <nav className="flex m-4 justify-between items-center">
           <a
             href="/"
@@ -93,7 +93,7 @@ export default function Movie() {
           <p className="text-sm text-gray-500">Demo checkout</p>
         </nav>
       </header>
-      <div className="m-6 flex lg:flex-row lg:gap-20 flex-col lg:w-full">
+      <div className="m-6 flex lg:flex-row lg:justify-around flex-col lg:w-full">
         <div>
           <div className="flex mt-10 mb-8 gap-3 items-center">
             <img
@@ -170,7 +170,7 @@ export default function Movie() {
             </div>
           </div>
         </div>
-        <div className="bg-[#111111] text-white p-5 rounded-4xl mt-8 flex flex-col gap-6 h-fit lg:w-96 sticky top-7">
+        <div className="bg-[#111111] text-white p-5 rounded-4xl mt-8 flex flex-col gap-6 h-fit lg:w-96 sticky top-10">
           <p className="flex text-xl font-bold items-center gap-2.5 m-2">
             <svg
               xmlns="http://www.w3.org/2000/svg"

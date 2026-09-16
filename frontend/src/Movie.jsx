@@ -95,11 +95,11 @@ export default function Movie() {
       </header>
       <div className="m-6 flex lg:flex-row lg:justify-around flex-col lg:w-full">
         <div>
-          <div className="flex flex-col lg:flex-row mt-10 mb-8 gap-3 items-center ">
+          <div className="flex flex-row mt-10 mb-8 gap-3 items-center ">
             <img
               src="https://images.unsplash.com/photo-1517604931442-7e0c8ed2963c?auto=format&fit=crop&w=900&q=85"
               alt=""
-              className="lg:w-32 lg:h-32 w-9/12 h-64  rounded-xl object-cover"
+              className="w-32 h-32   rounded-xl object-cover"
             />
             <div className="flex flex-col gap-1 mx-2.5 ">
               <p className="text-[#F5C518] font-semibold text-sm tracking-widest">

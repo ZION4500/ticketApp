@@ -4,6 +4,8 @@ import { createBrowserRouter, RouterProvider } from "react-router";
 import App from "./App";
 import Admin from "./Admin";
 import Movie from "./Movie";
+import Movies from "./Movies";
+import Layout from "./Layout";
 import "./index.css";
 
 const router = createBrowserRouter([
@@ -13,7 +15,17 @@ const router = createBrowserRouter([
   },
   {
     path: "admin",
-    element: <Admin />,
+    element: <Layout />,
+    children: [
+      {
+        index: true,
+        element: <Admin />,
+      },
+      {
+        path: "movie",
+        element: <Movies />,
+      },
+    ],
   },
   {
     path: "movie/:id",

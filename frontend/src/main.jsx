@@ -1,10 +1,11 @@
-import { Component, StrictMode } from "react";
+import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
 import { createBrowserRouter, RouterProvider } from "react-router";
 import App from "./App";
 import Admin from "./Admin";
 import Movie from "./Movie";
 import Movies from "./Movies";
+import Layout from "./Layout";
 import "./index.css";
 
 const router = createBrowserRouter([
@@ -13,11 +14,12 @@ const router = createBrowserRouter([
     element: <App />,
   },
   {
-      path: "admin",
+    path: "admin",
+    element: <Layout />,
     children: [
       {
         index: true,
-        element: <Admin />
+        element: <Admin />,
       },
       {
         path: "movie",

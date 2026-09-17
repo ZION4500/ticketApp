@@ -1,4 +1,18 @@
+import { useEffect, useState } from "react";
+import { useNavigate } from "react-router";
+
 export default function Landing() {
+  const navigate = useNavigate();
+  const [data, setData] = useState([]);
+  useEffect(() => {
+    async function fetchMovie() {
+      const response = await fetch(`http://localhost:3000/api/movies/1`);
+      const data = await response.json();
+      setData(data);
+    }
+
+    fetchMovie();
+  }, []);
   return (
     <div className="bg-[#FFFDF5] p-4">
       <header className=" pb-7">
@@ -12,7 +26,7 @@ export default function Landing() {
               <a href="#about">About Us</a>
             </div>
             <a
-              href="/admin" 
+              href="/admin"
               className="border border-[#DFDDD6] rounded-2xl p-2 px-3 flex gap-2"
             >
               <svg
@@ -31,9 +45,12 @@ export default function Landing() {
           </div>
         </nav>
       </header>
-      <section className="max-w-full shadow-2xl h-96 rounded-4xl bg-[url(https://placehold.co/600x400)] ">
+      <section
+        className="max-w-full shadow-2xl h-96 rounded-4xl bg-cover bg-center"
+        style={{ backgroundImage: `url(${data.img})` }}
+      >
         <div className="pl-16 text-white pt-28">
-          <h1 className="text-5xl font-medium">MOVIE TITLE</h1>
+          <h1 className="text-5xl font-medium">{data.name}</h1>
           <p className="font-medium py-3.5 flex items-center gap-2 ">
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -46,9 +63,12 @@ export default function Landing() {
               <path d="M8 3.5a.5.5 0 0 0-1 0V9a.5.5 0 0 0 .252.434l3.5 2a.5.5 0 0 0 .496-.868L8 8.71z" />
               <path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16m7-8A7 7 0 1 1 1 8a7 7 0 0 1 14 0" />
             </svg>
-            2h 52m
+            {data.time}
           </p>
-          <button className="bg-[#F5C518] font-bold p-1.5 border-[#F5C518] rounded-lg cursor-pointer border opacity-75  hover:opacity-100  transition-normal duration-200 ease-in">
+          <button
+            onClick={() => navigate("/movie/1")}
+            className="bg-[#F5C518] font-bold p-1.5 border-[#F5C518] rounded-lg cursor-pointer border opacity-75  hover:opacity-100  transition-normal duration-200 ease-in"
+          >
             Buy tickets
           </button>
         </div>

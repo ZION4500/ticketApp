@@ -1,11 +1,5 @@
 import { useParams } from "react-router";
-import { useState, useRef } from "react";
-
-async function fetchMovie(id) {
-  let response = await fetch(id);
-  let data = await response.json();
-  return data;
-}
+import { useState, useRef, useEffect } from "react";
 
 export default function Movie() {
   const ROW_LETTERS = [
@@ -59,7 +53,16 @@ export default function Movie() {
     "F8",
   ];
   const { id } = useParams();
-  fetchMovie(id);
+  const [movie, setMovie] = useState({});
+  useEffect(() => {
+    async function fetchMovie(id) {
+      const response = await fetch(`http://localhost:3000/api/movies/${id}`);
+      const data = await response.json();
+      setMovie(data);
+    }
+
+    fetchMovie(id);
+  }, []);
   const [seats, setSeats] = useState(0);
   const warningRef = useRef(null);
   const formRef = useRef(null);
@@ -97,7 +100,7 @@ export default function Movie() {
         <div>
           <div className="flex flex-row mt-10 mb-8 gap-3 items-center ">
             <img
-              src="https://images.unsplash.com/photo-1517604931442-7e0c8ed2963c?auto=format&fit=crop&w=900&q=85"
+              src={movie.img}
               alt=""
               className="w-32 h-32   rounded-xl object-cover"
             />
@@ -105,11 +108,11 @@ export default function Movie() {
               <p className="text-[#F5C518] font-semibold text-sm tracking-widest">
                 RESERVE YOUR SEATS
               </p>
-              <p className="text-4xl ">Movie title</p>
+              <p className="text-4xl ">{movie.name}</p>
               <div className="flex gap-3 text-sm text-gray-500">
-                <p>Category</p>
-                <p>Rating</p>
-                <p>time</p>
+                <p>{movie.category}</p>
+                <p>{movie.rating}</p>
+                <p>{movie.time}</p>
               </div>
             </div>
           </div>

@@ -10,7 +10,7 @@ export default function Movies({ children }) {
         </p>
         <p className="text-5xl">Now playing</p>
       </div>
-      <div className="flex flex-col md:flex-row mt-16">{children}</div>
+      <div className="flex flex-col md:grid md:grid-cols-4 mt-16">{children}</div>
     </div>
   );
 }

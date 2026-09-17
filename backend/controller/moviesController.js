@@ -30,7 +30,7 @@ function removeMovie(req, res) {
   res.status(200).json({ message: "Movie deleted successfully" });
 }
  
-module.exports = { listMovies, getMovie };
+module.exports = { listMovies, getMovie ,removeMovie , addMovie};
 
 
     

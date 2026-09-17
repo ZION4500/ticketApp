@@ -1,4 +1,7 @@
+import { useRef } from "react";
+
 export default function Admin() {
+  const addMovie = useRef(null);
   return (
     <div className="w-full h-screen bg-[#F6F4F1] md:p-12 p-6">
       <div className="flex justify-between items-start">
@@ -6,7 +9,12 @@ export default function Admin() {
           <h2 className="text-sm text-[#F5C518]">Admin Dashboard</h2>
           <p className="text-5xl mt-2 text-[#142018]">Studio overview</p>
         </div>
-        <button className="bg-[#F5C518] text-white py-2.5 rounded-full px-5 font-semibold flex gap-3 items-center cursor-pointer">
+        <button
+          onClick={() => {
+            addMovie.current.classList.toggle("hidden");
+          }}
+          className="bg-[#F5C518] text-white py-2.5 rounded-full px-5 font-semibold flex gap-3 items-center cursor-pointer"
+        >
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="16"
@@ -83,6 +91,73 @@ export default function Admin() {
               Tonight
             </p>
           </div>
+        </div>
+      </div>
+      <div
+        className="fixed inset-0 grid place-items-center hidden"
+        ref={addMovie}
+      >
+        <div
+          tabIndex={0}
+          onKeyDown={(e) => {
+            if (e.key === "Escape") {
+              addMovie.current.classList.toggle("hidden");
+            }
+          }}
+          onKeyUp={(e) => {
+            if (e.key === "Escape") {
+              addMovie.current.classList.toggle("hidden");
+            }
+          }}
+          className="relative w-screen h-screen flex justify-center items-center p-6"
+        >
+          <div className="absolute bg-black w-full h-full opacity-60 z-40"></div>
+          <form
+            method="post"
+            className=" bg-white  z-50  rounded-2xl p-6 flex flex-col w-full max-w-md"
+          >
+            <div className="flex justify-between items-center mb-7">
+              <p className="text-3xl">Add a movie</p>
+              <svg
+                className="cursor-pointer"
+                onClick={() => {
+                  addMovie.current.classList.toggle("hidden");
+                }}
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                height="16"
+                fill="currentColor"
+                class="bi bi-x"
+                viewBox="0 0 16 16"
+              >
+                <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708" />
+              </svg>
+            </div>
+            <label htmlFor="title" className="text-sm font-semibold">
+              Movie title
+            </label>
+            <input
+              name="title"
+              type="text"
+              placeholder="e.g. The Last Horizon"
+              className="placeholder:text-sm placeholder:font-semibold placeholder:text-[#D3D5D3] p-2 border border-[#D3D5D3] rounded-2xl mt-2 mb-3"
+            />
+            <label htmlFor="genre" className="text-sm font-semibold">
+              Genre
+            </label>
+            <input
+              name="genre"
+              type="text"
+              placeholder="Sci-Fi Adventure"
+              className="placeholder:text-sm placeholder:font-semibold placeholder:text-[#D3D5D3] p-2 border border-[#D3D5D3] rounded-2xl mt-2 mb-3"
+            />
+            <button
+              onClick={(e) => e.preventDefault()}
+              className="mt-2.5 bg-[#F5C518] text-white p-3 rounded-2xl text-lg font-semibold cursor-pointer"
+            >
+              Save listing
+            </button>
+          </form>
         </div>
       </div>
     </div>

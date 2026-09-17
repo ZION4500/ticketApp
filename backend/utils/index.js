@@ -2,9 +2,9 @@ const express = require("express");
 const cors = require("cors");
 require("dotenv").config();
 
-const movieRoutes = require("./routes/moviesRoute");
-const seatsRoutes = require("./routes/seatsRoutes");
-const userRoutes = require("./routes/userRoutes");
+const movieRoutes = require("../routes/moviesRoute");
+const seatsRoutes = require("../routes/seatsRoutes");
+const userRoutes = require("../routes/userRoutes");
 
 const app = express();
 

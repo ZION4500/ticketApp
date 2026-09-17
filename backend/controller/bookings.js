@@ -25,11 +25,3 @@ function create({ showtimeId, seatIds, customerName, customerEmail, total }) {
 }
 
 module.exports = { findAll, findById, create };
-
-const tickets = [];
-
-let newId = tickets.length + 1;
-
-function findAllTickets() {
-  return tickets;
-}   

@@ -21,6 +21,12 @@ function addMovie(req, res) {
   res.status(201).json(newMovie);
 }
 
+//CREATE MOVIE
+function createMovie(req, res) {
+  const updatedMovie = movieService.update(req.params.id, req.body);  
+  res.json(updatedMovie);
+}
+
 // DELETE MOVIE
 function removeMovie(req, res) {
   const deleted = movieService.deleteById(req.params.id);
@@ -30,7 +36,7 @@ function removeMovie(req, res) {
   res.status(200).json({ message: "Movie deleted successfully" });
 }
  
-module.exports = { listMovies, getMovie ,removeMovie , addMovie};
+module.exports = { listMovies, getMovie ,addMovie , createMovie, removeMovie};
 
 
     

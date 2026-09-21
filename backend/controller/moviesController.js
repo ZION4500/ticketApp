@@ -14,8 +14,8 @@ function getMovie(req, res) {
 
 // ADD MOVIE
 function addMovie(req, res) {
-  if (!req.body.title) {
-    return res.status(400).json({ error: "Movie title is required" });
+  if (!req.body.name) {
+    return res.status(400).json({ error: "Movie name is required" });
   }
   const newMovie = movieService.create(req.body);
   res.status(201).json(newMovie);
@@ -23,13 +23,16 @@ function addMovie(req, res) {
 
 //CREATE MOVIE
 function createMovie(req, res) {
-  const updatedMovie = movieService.update(req.params.id, req.body);  
+  const updatedMovie = movieService.update(req.params.id, req.body); 
+  if (!updatedMovie) {
+    return res.status(404).json({ error: "Movie not found" });
+  } 
   res.json(updatedMovie);
 }
 
 // DELETE MOVIE
 function removeMovie(req, res) {
-  const deleted = movieService.deleteById(req.params.id);
+  const deleted = movieService.remove(req.params.id);
   if (!deleted) {
     return res.status(404).json({ error: "Movie not found" });
   }

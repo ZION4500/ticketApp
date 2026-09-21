@@ -1,7 +1,32 @@
-import { useRef } from "react";
+import { useRef, useState } from "react";
 
 export default function Admin() {
   const addMovie = useRef(null);
+  const [title, setTitle] = useState("");
+  const [category, setCategory] = useState("");
+  const [rating, setRating] = useState("");
+  const [time, setTime] = useState("");
+
+  async function Submit(title, category, rating, time) {
+    const res = await fetch("http://localhost:3000/api/movie", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        name: title,
+        category: category,
+        rating: rating,
+        time: time,
+        img: "https://placehold.co/600x400",
+      }),
+    });
+    if (!res.ok) {
+      throw new Error("failed to create movie");
+    }
+    console.log(res.json);
+  }
+
   return (
     <div className="w-full h-screen bg-[#F6F4F1] md:p-12 p-6">
       <div className="flex justify-between items-start">
@@ -141,6 +166,7 @@ export default function Admin() {
               type="text"
               placeholder="e.g. The Last Horizon"
               className="placeholder:text-sm placeholder:font-semibold placeholder:text-[#D3D5D3] p-2 border border-[#D3D5D3] rounded-2xl mt-2 mb-3"
+              onChange={(e) => setTitle(e.target.value)}
             />
             <label htmlFor="category" className="text-sm font-semibold">
               Category
@@ -150,6 +176,7 @@ export default function Admin() {
               type="text"
               placeholder="Sci-Fi Adventure"
               className="placeholder:text-sm placeholder:font-semibold placeholder:text-[#D3D5D3] p-2 border border-[#D3D5D3] rounded-2xl mt-2 mb-3"
+              onChange={(e) => setCategory(e.target.value)}
             />
             <label htmlFor="rating" className="text-sm font-semibold">
               Rating
@@ -159,6 +186,7 @@ export default function Admin() {
               type="text"
               placeholder="PG-13"
               className="placeholder:text-sm placeholder:font-semibold placeholder:text-[#D3D5D3] p-2 border border-[#D3D5D3] rounded-2xl mt-2 mb-3"
+              onChange={(e) => setRating(e.target.value)}
             />
             <label htmlFor="time" className="text-sm font-semibold">
               time
@@ -168,17 +196,14 @@ export default function Admin() {
               type="text"
               placeholder="2h 46min"
               className="placeholder:text-sm placeholder:font-semibold placeholder:text-[#D3D5D3] p-2 border border-[#D3D5D3] rounded-2xl mt-2 mb-3"
+              onChange={(e) => setTime(e.target.value)}
             />
-            <label htmlFor="image" className="text-sm font-semibold">
-              Image
-            </label>
-            <input
-              name="image"
-              type="text"
-              className=" p-2 border border-[#D3D5D3] rounded-2xl mt-2 mb-3"
-            />
+
             <button
-              onClick={(e) => e.preventDefault()}
+              onClick={(e) => {
+                e.preventDefault();
+                Submit(title, category, rating, time);
+              }}
               className="mt-2.5 bg-[#F5C518] text-white p-3 rounded-2xl text-lg font-semibold cursor-pointer"
             >
               Save listing

@@ -7,6 +7,13 @@ export default function Admin() {
   const [rating, setRating] = useState("");
   const [time, setTime] = useState("");
 
+  function Clear() {
+    setTitle("");
+    setCategory("");
+    setRating("");
+    setTime("");
+  }
+
   async function Submit(title, category, rating, time) {
     const res = await fetch("http://localhost:3000/api/movie", {
       method: "POST",
@@ -127,11 +134,13 @@ export default function Admin() {
           onKeyDown={(e) => {
             if (e.key === "Escape") {
               addMovie.current.classList.toggle("hidden");
+              Clear();
             }
           }}
           onKeyUp={(e) => {
             if (e.key === "Escape") {
               addMovie.current.classList.toggle("hidden");
+              Clear();
             }
           }}
           className="relative w-screen h-screen flex justify-center items-center p-6"
@@ -147,6 +156,7 @@ export default function Admin() {
                 className="cursor-pointer"
                 onClick={() => {
                   addMovie.current.classList.toggle("hidden");
+                  Clear();
                 }}
                 xmlns="http://www.w3.org/2000/svg"
                 width="16"
@@ -166,6 +176,7 @@ export default function Admin() {
               type="text"
               placeholder="e.g. The Last Horizon"
               className="placeholder:text-sm placeholder:font-semibold placeholder:text-[#D3D5D3] p-2 border border-[#D3D5D3] rounded-2xl mt-2 mb-3"
+              value={title}
               onChange={(e) => setTitle(e.target.value)}
             />
             <label htmlFor="category" className="text-sm font-semibold">
@@ -176,6 +187,7 @@ export default function Admin() {
               type="text"
               placeholder="Sci-Fi Adventure"
               className="placeholder:text-sm placeholder:font-semibold placeholder:text-[#D3D5D3] p-2 border border-[#D3D5D3] rounded-2xl mt-2 mb-3"
+              value={category}
               onChange={(e) => setCategory(e.target.value)}
             />
             <label htmlFor="rating" className="text-sm font-semibold">
@@ -186,6 +198,7 @@ export default function Admin() {
               type="text"
               placeholder="PG-13"
               className="placeholder:text-sm placeholder:font-semibold placeholder:text-[#D3D5D3] p-2 border border-[#D3D5D3] rounded-2xl mt-2 mb-3"
+              value={rating}
               onChange={(e) => setRating(e.target.value)}
             />
             <label htmlFor="time" className="text-sm font-semibold">
@@ -196,6 +209,7 @@ export default function Admin() {
               type="text"
               placeholder="2h 46min"
               className="placeholder:text-sm placeholder:font-semibold placeholder:text-[#D3D5D3] p-2 border border-[#D3D5D3] rounded-2xl mt-2 mb-3"
+              value={time}
               onChange={(e) => setTime(e.target.value)}
             />
 

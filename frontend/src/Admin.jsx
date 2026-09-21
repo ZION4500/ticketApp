@@ -142,14 +142,40 @@ export default function Admin() {
               placeholder="e.g. The Last Horizon"
               className="placeholder:text-sm placeholder:font-semibold placeholder:text-[#D3D5D3] p-2 border border-[#D3D5D3] rounded-2xl mt-2 mb-3"
             />
-            <label htmlFor="genre" className="text-sm font-semibold">
-              Genre
+            <label htmlFor="category" className="text-sm font-semibold">
+              Category
             </label>
             <input
-              name="genre"
+              name="category"
               type="text"
               placeholder="Sci-Fi Adventure"
               className="placeholder:text-sm placeholder:font-semibold placeholder:text-[#D3D5D3] p-2 border border-[#D3D5D3] rounded-2xl mt-2 mb-3"
+            />
+            <label htmlFor="rating" className="text-sm font-semibold">
+              Rating
+            </label>
+            <input
+              name="rating"
+              type="text"
+              placeholder="PG-13"
+              className="placeholder:text-sm placeholder:font-semibold placeholder:text-[#D3D5D3] p-2 border border-[#D3D5D3] rounded-2xl mt-2 mb-3"
+            />
+            <label htmlFor="time" className="text-sm font-semibold">
+              time
+            </label>
+            <input
+              name="time"
+              type="text"
+              placeholder="2h 46min"
+              className="placeholder:text-sm placeholder:font-semibold placeholder:text-[#D3D5D3] p-2 border border-[#D3D5D3] rounded-2xl mt-2 mb-3"
+            />
+            <label htmlFor="image" className="text-sm font-semibold">
+              Image
+            </label>
+            <input
+              name="image"
+              type="text"
+              className=" p-2 border border-[#D3D5D3] rounded-2xl mt-2 mb-3"
             />
             <button
               onClick={(e) => e.preventDefault()}

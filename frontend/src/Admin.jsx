@@ -15,7 +15,7 @@ export default function Admin() {
   }
 
   async function Submit(title, category, rating, time) {
-    const res = await fetch("http://localhost:3000/api/movie", {
+    const res = await fetch("http://localhost:3000/api/movies/1", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

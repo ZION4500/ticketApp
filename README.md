@@ -52,17 +52,16 @@ npm install
 
 Create a `.env` file in the root of the `backend/` directory and populate it with your environment variables:
 ```env
-PORT=5000
+PORT=3000
 DATABASE_URL=your_database_connection_string
 JWT_SECRET=your_super_secret_jwt_key
 ```
 
 Start the backend development server:
 ```bash
-npm run dev
-# or: node server.js
+node index.js
 ```
-The server will typically spin up at `http://localhost:5000`.
+The server will typically spin up at `http://localhost:3000`.
 
 ### 3. Frontend Setup
 Open a new terminal window, navigate to the frontend folder, and install the dependencies:
@@ -73,7 +72,7 @@ npm install
 
 Create a `.env` file in the root of the `frontend/` directory to configure your API endpoint link:
 ```env
-VITE_API_BASE_URL=http://localhost:5000/api
+VITE_API_BASE_URL=http://localhost:3000/api
 ```
 
 Start the React development server:

@@ -13,4 +13,4 @@ router.get('/:id', getShowtime);
 router.put('/:id', updateShowtime);
 router.delete('/:id', cancelShowtime);
 
-module.exports = router;
+module.exports = router; 

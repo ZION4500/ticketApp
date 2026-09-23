@@ -1,4 +1,5 @@
 import { useRef, useState } from "react";
+import { ToastContainer, toast, Zoom } from "react-toastify";
 
 export default function Admin() {
   const addMovie = useRef(null);
@@ -30,6 +31,20 @@ export default function Admin() {
     });
     if (!res.ok) {
       throw new Error("failed to create movie");
+    } else {  
+      toast.success("Movie Created", {
+        position: "top-right",
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: false,
+        draggable: true,
+        progress: undefined,
+        theme: "dark",
+        transition: Zoom,
+      });
+      addMovie.current.classList.toggle("hidden");
+      Clear();
     }
     console.log(res.json);
   }
@@ -225,6 +240,19 @@ export default function Admin() {
           </form>
         </div>
       </div>
+      <ToastContainer
+        position="top-right"
+        autoClose={5000}
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover={false}
+        theme="dark"
+        transition={Zoom}
+      />
     </div>
   );
 }

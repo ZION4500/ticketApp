@@ -9,6 +9,7 @@ const movies = [
 
 export default function Movies() {
   return (
+<<<<<<< HEAD
     <div className="p-6 md:p-12">
       <h1 className="text-4xl font-semibold">Movies</h1>
 

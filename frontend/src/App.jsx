@@ -2,35 +2,19 @@ import Landing from "./components/landing";
 import Movies from "./components/movies";
 import Movie from "./components/movie";
 import About from "./components/about";
-
-let data = [
-  {
-    id: 1,
-    img: "https://placehold.co/600x400",
-    name: "Movie title",
-    category: "Category",
-    rating: "PG-13",
-    time: "2h 5min",
-  },
-  {
-    id: 2,
-    img: "https://placehold.co/600x400",
-    name: "Movie title",
-    category: "Category",
-    rating: "PG-13",
-    time: "2h 5min",
-  },
-  {
-    id: 3,
-    img: "https://placehold.co/600x400",
-    name: "Movie title",
-    category: "Category",
-    rating: "PG-13",
-    time: "2h 5min",
-  },
-];
+import { useEffect, useState } from "react";
 
 export default function App() {
+  const [data, setData] = useState([]);
+  useEffect(() => {
+    async function fetchMovie() {
+      const response = await fetch(`http://localhost:3000/api/movies`);
+      const data = await response.json();
+      setData(data);
+    }
+
+    fetchMovie();
+  }, []);
   return (
     <>
       <Landing />

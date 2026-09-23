@@ -1,5 +1,5 @@
 const bookings = [];
-let newId = 1;
+let Id = 1;
 
 function findAll() {
   return bookings;
@@ -9,9 +9,13 @@ function findById(id) {
   return bookings.find((b) => b.id === Number(id)) || null;
 }
 
+function findByMovieId(movieId) {
+  return bookings.filter((b) => b.showtimeId === Number(movieId));
+}
+
 function create({ showtimeId, seatIds, customerName, customerEmail, total }) {
   const booking = {
-    id: newId++,
+    id: Id++,
     showtimeId: Number(showtimeId),
     seatIds: seatIds.map(Number),
     customerName,
@@ -24,4 +28,4 @@ function create({ showtimeId, seatIds, customerName, customerEmail, total }) {
   return booking;
 }
 
-module.exports = { findAll, findById, create };
+module.exports = { findAll, findById, findByMovieId, create };

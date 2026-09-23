@@ -1,5 +1,5 @@
 const seats = [];
-let newId = 1;
+let newId = seats.length + 1;
 
 const ROWS = ["A", "B", "C", "D", "E", "F"];
 const SEATS_PER_ROW = 8;
@@ -26,20 +26,37 @@ function generateForShowtime(showtimeId) {
   return created;
 }
 
+function findAll() {
+  return seats;
+}
+
+function findById(id) {
+  return seats.find(s => s.id === Number(id)) || null;
+}
+
 function findByShowtime(showtimeId) {
-  return seats.filter((s) => s.showtimeId === Number(showtimeId));
+  return seats.filter(s => s.showtimeId === Number(showtimeId));
 }
 
 function findByIds(ids) {
   const idSet = new Set(ids.map(Number));
-  return seats.filter((s) => idSet.has(s.id));
+  return seats.filter(s => idSet.has(s.id));
 }
 
 function update(id, updates) {
-  const index = seats.findIndex((s) => s.id === Number(id));
+  const index = seats.findIndex(s => s.id === Number(id));
   if (index === -1) return null;
   seats[index] = { ...seats[index], ...updates, id: Number(id) };
   return seats[index];
+}
+
+function remove(id) {
+  const index = seats.findIndex(s => s.id === Number(id));
+  if (index !== -1) {
+    seats.splice(index, 1);
+    return true;
+  }
+  return false;
 }
 
 function releaseExpiredHolds(showtimeId) {
@@ -51,5 +68,4 @@ function releaseExpiredHolds(showtimeId) {
   }
 }
 
-module.exports = { generateForShowtime, findByShowtime, findByIds, update, releaseExpiredHolds };
-
+module.exports = { generateForShowtime, findAll, findById, findByShowtime, findByIds, update, remove, releaseExpiredHolds };

@@ -21,10 +21,10 @@ app.get("/", (req, res) => {
 });
 
 // Mount routes under /api
-app.use("/api", movieRoutes);
-app.use("/api", seatsRoutes);
-app.use("/api", userRoutes);
-app.use("/api", bookingsRoutes);
+app.use("/api/movie", movieRoutes);
+app.use("/api/seats", seatsRoutes);
+app.use("/api/user", userRoutes);
+app.use("/api/bookings", bookingsRoutes);
 //app.use("/api", showtimesRoutes);
 //app.use("/api", authRoutes);
 

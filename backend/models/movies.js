@@ -82,7 +82,7 @@ const movies = [
   },
   {
     id: 11,
-    img: `${BASE_URL}/images/the_hitman's_wife_bodyguard.jpg`,
+    img: `${BASE_URL}/images/the_hitmans_wife_bodyguard.jpg`,
     name: "The Hitman's Wife Bodyguard",
     category: "Action",
     rating: "PG-13",

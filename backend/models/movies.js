@@ -74,8 +74,8 @@ const movies = [
   },
   {
     id: 10,
-    img: `${BASE_URL}/images/not_a_cinderella_story.jpg`,
-    name: "Not a Cinderella Story",
+    img: `${BASE_URL}/images/not_cinderella's_type.jpg`,
+    name: "Not Cinderella's Type",
     category: "Drama",
     rating: "PG-13",
     time: "2h 5min",

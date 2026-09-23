@@ -1,4 +1,4 @@
-const   BASE_URL= process.env.BASE_URL || "http://localhost:3000";
+const BASE_URL = process.env.BASE_URL || "http://localhost:3000";
 const movies = [
   {
     id: 1,
@@ -82,7 +82,7 @@ const movies = [
   },
   {
     id: 11,
-    img: `${BASE_URL}/images/the_hitmans_wife_bodyguard.jpg`,
+    img: `${BASE_URL}/images/hitman.jpg`,
     name: "The Hitman's Wife Bodyguard",
     category: "Action",
     rating: "PG-13",
@@ -98,7 +98,7 @@ const movies = [
   },
   {
     id: 13,
-    img: `${BASE_URL}/images/enchanted.jpg` ,
+    img: `${BASE_URL}/images/enchanted.jpg`,
     name: "Enchanted",
     category: "Animation",
     rating: "PG-13",
@@ -106,7 +106,7 @@ const movies = [
   },
   {
     id: 14,
-    img: `${BASE_URL}/images/a_tribe_called_judah.jpg`,
+    img: `${BASE_URL}/images/a_tribe_called_judah.png`,
     name: "A Tribe called Judah",
     category: "Drama",
     rating: "PG-12",

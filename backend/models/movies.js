@@ -1,7 +1,7 @@
 const movies = [
   {
     id: 1,
-    img: "https://placehold.co/600x400",
+    img: "https://a_quiet_place.jpg/600x400",
     name: "A Quiet Place",
     category: "Thriller",
     rating: "PG-13",
@@ -9,7 +9,7 @@ const movies = [
   },
   {
     id: 2,
-    img: "https://placehold.co/600x400",
+    img: "https://enchanted.jpg/600x400",
     name: "A Quiet Place Part II",
     category: "Thriller",
     rating: "PG-13",
@@ -17,7 +17,7 @@ const movies = [
   },
   {
     id: 3,
-    img: "https://placehold.co/600x400",
+    img: "https://batman.jpg/600x400",
     name: "The Batman",
     category: "Action",
     rating: "PG-13",
@@ -25,7 +25,7 @@ const movies = [
   },
   {
     id: 4,
-    img: "https://placehold.co/600x400",
+    img: "https://how_to_train_your_dragon.jpg/600x400",
     name: "How To Train Your Dragon",
     category: "Animation",
     rating: "PG-13",
@@ -33,7 +33,7 @@ const movies = [
   },
   {
     id: 5,
-    img: "https://placehold.co/600x400",
+    img: "https://the_bridge_to_terabithia.jpg/600x400",
     name: "The Bridge to Terabithia",
     category: "Drama",
     rating: "PG-12",
@@ -41,7 +41,7 @@ const movies = [
   },
   {
     id: 6,
-    img: "https://placehold.co/600x400",
+    img: "https://snow_white_and_the_huntsman.jpg/600x400",
     name: "Snow White and the Huntsman",
     category: "Fantasy",
     rating: "PG-13",
@@ -49,7 +49,7 @@ const movies = [
   },
   {
     id: 7,
-    img: "https://placehold.co/600x400",
+    img: "https://the_last_horizon.jpg/600x400",
     name: "The Last Horizon",
     category: "Science Fiction",
     rating: "PG-13",
@@ -57,7 +57,7 @@ const movies = [
   },
   {
     id: 8,
-    img: "https://placehold.co/600x400",
+    img: "https://neon_streets.jpg/600x400",
     name: "Neon Streets",
     category: "Action",
     rating: "PG-13",
@@ -65,7 +65,7 @@ const movies = [
   },
   {
     id: 9,
-    img: "https://placehold.co/600x400",
+    img: "https://insidious.jpg/600x400",
     name: "Insidious: The Red Door",
     category: "Horror",
     rating: "PG-16",
@@ -73,7 +73,7 @@ const movies = [
   },
   {
     id: 10,
-    img: "https://placehold.co/600x400",
+    img: "https://not_a_cinderella_story.jpg/600x400",
     name: "Not a Cinderella Story",
     category: "Drama",
     rating: "PG-13",
@@ -81,7 +81,7 @@ const movies = [
   },
   {
     id: 11,
-    img: "https://placehold.co/600x400",
+    img: "https://the_hitman's_wife_bodyguard.jpg/600x400",
     name: "The HItman's Wife Bodyguard",
     category: "Action",
     rating: "PG-13",
@@ -89,7 +89,7 @@ const movies = [
   },
   {
     id: 12,
-    img: "https://placehold.co/600x400",
+    img: "https://the_witches.jpg/600x400",
     name: "The Witches",
     category: "Fantasy",
     rating: "PG-13",
@@ -97,7 +97,7 @@ const movies = [
   },
   {
     id: 13,
-    img: "https://placehold.co/600x400",
+    img: "https://enchanted.jpg/600x400",
     name: "Enchanted",
     category: "Animation",
     rating: "PG-13",
@@ -105,7 +105,7 @@ const movies = [
   },
   {
     id: 14,
-    img: "https://placehold.co/600x400",
+    img: "https://a_tribe_called_judah.jpg/600x400",
     name: "A Tribe called Judah",
     category: "Drama",
     rating: "PG-12",
@@ -113,7 +113,7 @@ const movies = [
   },
   {
     id: 15,
-    img: "https://placehold.co/600x400",
+    img: "https://the_wedding_party.jpg/600x400",
     name: "The Wedding Party",
     category: "Drama",
     rating: "PG-13",

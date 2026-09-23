@@ -1,6 +1,6 @@
 const express = require('express');
 const router = express.Router();
-const userController = require('../controller/userControllers');
+const userController = require('../controller/userController');
 const { findByUsername } = require('../models/users');
      
 router.get('/', userController.getAllUsers);

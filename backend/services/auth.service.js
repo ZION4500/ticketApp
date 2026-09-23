@@ -2,7 +2,7 @@ const bcrypt = require('bcryptjs');
 const jwt = require('jsonwebtoken');
 const User = require('../models/User');
 const AppError = require('../utils/AppError');
-const env = require('../config/env');
+// const env = require('../config/env');
 
 function login(username, password) {
   const user = User.findByUsername(username);

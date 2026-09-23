@@ -9,7 +9,6 @@ const movies = [
 
 export default function Movies() {
   return (
-<<<<<<< HEAD
     <div className="p-6 md:p-12">
       <h1 className="text-4xl font-semibold">Movies</h1>
 
@@ -34,7 +33,7 @@ export default function Movies() {
             </div>
           </div>
         ))}
-      </div>
+      </div>1488418e32105d0d607478c0
     </div>
   );
 }

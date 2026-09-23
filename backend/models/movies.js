@@ -58,7 +58,7 @@ const movies = [
   },
   {
     id: 8,
-    img: `${BASE_URL}/images/the_king'sman.jpg`,
+    img: `${BASE_URL}/images/the_kingsman.jpg`,
     name: "The King's Man",
     category: "Action",
     rating: "PG-13",

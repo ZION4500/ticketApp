@@ -67,6 +67,7 @@
     "cookie": "^0.7.2",
     "cookie-signature": "^1.2.2",
     "core-util-is": "^1.0.3",
+    "cors": "^2.8.6",
     "cross-spawn": "^7.0.6",
     "debug": "^4.4.3",
     "default-browser": "^5.5.1",

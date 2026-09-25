@@ -6,7 +6,7 @@ export default function Landing() {
   const [data, setData] = useState([]);
   useEffect(() => {
     async function fetchMovie() {
-      const response = await fetch(`http://localhost:3000/api/movies/4`);
+      const response = await fetch(`http://localhost:3000/api/movies/11`);
       const data = await response.json();
       setData(data);
     }
@@ -49,8 +49,8 @@ export default function Landing() {
         className="max-w-full shadow-2xl h-125 rounded-4xl bg-cover bg-center"
         style={{ backgroundImage: `url(${data.img})` }}
       >
-        <div className="pl-16 text-white pt-28">
-          <h1 className="text-5xl font-medium">{data.name}</h1>
+        <div className="text-white sm:pt-28 pt-72 pl-16">
+          <h1 className="sm:text-5xl font-medium  text-xl">{data.name}</h1>
           <p className="font-medium py-3.5 flex items-center gap-2 ">
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -66,7 +66,7 @@ export default function Landing() {
             {data.time}
           </p>
           <button
-            onClick={() => navigate("/movie/1")}
+            onClick={() => navigate("/movie/11")}
             className="bg-[#F5C518] font-bold p-1.5 border-[#F5C518] rounded-lg cursor-pointer border opacity-75  hover:opacity-100  transition-normal duration-200 ease-in"
           >
             Buy tickets

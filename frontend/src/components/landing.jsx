@@ -6,7 +6,7 @@ export default function Landing() {
   const [data, setData] = useState([]);
   useEffect(() => {
     async function fetchMovie() {
-      const response = await fetch(`http://localhost:3000/api/movies/1`);
+      const response = await fetch(`http://localhost:3000/api/movies/4`);
       const data = await response.json();
       setData(data);
     }
@@ -46,7 +46,7 @@ export default function Landing() {
         </nav>
       </header>
       <section
-        className="max-w-full shadow-2xl h-96 rounded-4xl bg-cover bg-center"
+        className="max-w-full shadow-2xl h-125 rounded-4xl bg-cover bg-center"
         style={{ backgroundImage: `url(${data.img})` }}
       >
         <div className="pl-16 text-white pt-28">

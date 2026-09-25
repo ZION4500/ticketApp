@@ -1,4 +1,4 @@
-const   BASE_URL= process.env.BASE_URL || "http://localhost:3000";
+const BASE_URL = process.env.BASE_URL || "http://localhost:3000";
 const movies = [
   {
     id: 1,
@@ -10,7 +10,7 @@ const movies = [
   },
   {
     id: 2,
-    img: `${BASE_URL}/images/a_quiet_place_part_ii.jpg`,
+    img: `${BASE_URL}/images/a_quiet_place_part_ii.png`,
     name: "A Quiet Place Part II",
     category: "Thriller",
     rating: "PG-13",
@@ -18,7 +18,7 @@ const movies = [
   },
   {
     id: 3,
-    img: `${BASE_URL}/images/the_batman.jpg`,
+    img: `${BASE_URL}/images/the_batman.png`,
     name: "The Batman",
     category: "Action",
     rating: "PG-13",
@@ -34,7 +34,7 @@ const movies = [
   },
   {
     id: 5,
-    img: `${BASE_URL}/images/the_bridge_to_terabithia.jpg`,
+    img: `${BASE_URL}/images/the_bridge_to_terabithia.png`,
     name: "The Bridge to Terabithia",
     category: "Drama",
     rating: "PG-12",
@@ -42,7 +42,7 @@ const movies = [
   },
   {
     id: 6,
-    img: `${BASE_URL}/images/snow_white_and_the_huntsman.jpg`,
+    img: `${BASE_URL}/images/snow_white_and_the_huntsman.png`,
     name: "Snow White and the Huntsman",
     category: "Fantasy",
     rating: "PG-13",
@@ -50,23 +50,23 @@ const movies = [
   },
   {
     id: 7,
-    img: `${BASE_URL}/images/the_last_horizon.jpg`,
-    name: "The Last Horizon",
-    category: "Science Fiction",
+    img: `${BASE_URL}/images/along_for_the_ride.jpg`,
+    name: "Along for the Ride",
+    category: "Drama",
     rating: "PG-13",
     time: "2h 5min",
   },
   {
     id: 8,
-    img: `${BASE_URL}/images/neon_streets.jpg`,
-    name: "Neon Streets",
+    img: `${BASE_URL}/images/the_kingsman.jpg`,
+    name: "The King's Man",
     category: "Action",
     rating: "PG-13",
     time: "2h 5min",
   },
   {
     id: 9,
-    img: `${BASE_URL}/images/insidious_the_red_door.jpg`,
+    img: `${BASE_URL}/images/insidious_the_red_door.png`,
     name: "Insidious: The Red Door",
     category: "Horror",
     rating: "PG-16",
@@ -82,7 +82,7 @@ const movies = [
   },
   {
     id: 11,
-    img: `${BASE_URL}/images/the_hitman's_wife_bodyguard.jpg`,
+    img: `${BASE_URL}/images/hitman.jpg`,
     name: "The Hitman's Wife Bodyguard",
     category: "Action",
     rating: "PG-13",
@@ -98,7 +98,7 @@ const movies = [
   },
   {
     id: 13,
-    img: `${BASE_URL}/images/enchanted.jpg` ,
+    img: `${BASE_URL}/images/enchanted.png`,
     name: "Enchanted",
     category: "Animation",
     rating: "PG-13",
@@ -106,7 +106,7 @@ const movies = [
   },
   {
     id: 14,
-    img: `${BASE_URL}/images/a_tribe_called_judah.jpg`,
+    img: `${BASE_URL}/images/a_tribe_called_judah.png`,
     name: "A Tribe called Judah",
     category: "Drama",
     rating: "PG-12",

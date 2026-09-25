@@ -13,7 +13,7 @@ const app = express();
 
 app.use(cors());
 app.use(express.json());
-app.use(express.static('public'))
+app.use(express.static("public"));
 app.use("/images", express.static("public"));
 
 app.get("/", (req, res) => {
@@ -22,9 +22,9 @@ app.get("/", (req, res) => {
 
 // Mount routes under /api
 app.use("/api", movieRoutes);
-app.use("/api", seatsRoutes);
-app.use("/api", userRoutes);
-app.use("/api", bookingsRoutes);
+app.use("/api/seats", seatsRoutes);
+app.use("/api/user", userRoutes);
+app.use("/api/bookings", bookingsRoutes);
 //app.use("/api", showtimesRoutes);
 //app.use("/api", authRoutes);
 

@@ -2,13 +2,14 @@ const express = require('express');
 
 const router = express.Router();
 const { requireFields } = require('../middleware/validateMiddleware');
-const { createBooking, getBooking } = require('../controller/bookingsController');
+const { createBooking, getBooking ,getAllBookings } = require('../controller/bookingsController');
 
 router.post(
   '/',
   requireFields(['showtimeId', 'seatIds', 'sessionId', 'customerName', 'customerEmail']),
-  bookingsController.createBooking
+ createBooking
 );
-router.get('/:id', bookingsController.getBooking);
+router.get('/:id', getBooking);
+router.get('/', getAllBookings);
 
 module.exports = router;

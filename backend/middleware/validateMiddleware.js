@@ -1,7 +1,6 @@
 const AppError = require('../utils/AppError');
 
-// Tiny dependency-free body validator. Pass a list of required field
-// names; swap for zod/joi/express-validator once the schemas grow.
+
 function requireFields(fields) {
   return (req, res, next) => {
     const missing = fields.filter((field) => {

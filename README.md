@@ -25,7 +25,7 @@ This repository houses both the **React frontend** and the **Express backend**, 
 * **Runtime Environment:** Node.js
 * **Framework:** Express.js
 * **Authentication:** JWT (JSON Web Tokens) & bcryptjs
-* **Database:** MongoDB (with Mongoose) OR MySQL / PostgreSQL (with Sequelize) *[Change based on your choice]*
+* **Database:** PostgreSQL (with PRISMA) *[Change based on your choice]*
 
 ---
 
